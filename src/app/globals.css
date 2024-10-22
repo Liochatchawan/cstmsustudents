@@ -40,14 +40,14 @@ main {
     justify-items: center;
 }
 
-.text-7xl {
+.text-wellcom {
     min-height: 80px;
     /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่พิมพ์ */
     transition: opacity 0.5s;
     /* เพิ่มการเปลี่ยนแปลงความโปร่งใส */
 }
 
-.text-xl {
+.text-detail {
     min-height: 50px;
     /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่สอง */
     transition: opacity 0.5s;
@@ -82,7 +82,10 @@ main {
     transform: translateY(-150%);
     justify-content: center;
 }
-
+.servicesPage-video{
+    width:640px;
+    height:360px;
+}
 .member-Photo {
     width: auto;
     border-radius: 10px;

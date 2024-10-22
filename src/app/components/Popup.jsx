@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Popup.css'; // นำเข้า CSS สำหรับ Popup
-
+import './M600Popup.css';
 const Popup = ({ message, onClose }) => {
 
   const [inputValue, setInputValue] = useState('');
@@ -25,7 +25,7 @@ const Popup = ({ message, onClose }) => {
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <div className="detail">
-          <h2>1 + 1 = ได้เท่าไหร่น้องๆ</h2>
+          <h2>1+1 = ได้เท่าไหร่น้องๆ</h2>
           <input
             type="text"
             value={inputValue}
@@ -33,7 +33,7 @@ const Popup = ({ message, onClose }) => {
             placeholder="ตอบมาเลยไอ้น้อง"
           />
 
-          <div class = "answerPopup">{result}</div> {/* แสดงผลลัพธ์หลังจากกด Submit */}
+          <div className = "answerPopup">{result}</div> {/* แสดงผลลัพธ์หลังจากกด Submit */}
           <button className="btn-submit" onClick={handleSubmit}>Submit</button>
         </div>
         <br />

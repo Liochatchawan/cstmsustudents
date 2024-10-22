@@ -1,0 +1,34 @@
+@media screen and (max-width: 600px) {
+    .popup-content{
+        width: 80vw;
+        height: 90vw;
+    }
+    h2{
+        margin-top: 5vw;
+        padding-top: 0;
+        font-size: 30px;
+    }
+    input{
+        margin-top: 5vw ;
+        width: 50vw;
+        height: 15vw;
+        border: #000000 solid;
+        border-radius: 10px;
+        font-size: 5vw;
+    }
+    .answerPopup{
+        margin-top: 5vw;
+        margin-bottom: 20vw;
+        font-size: 5vw;
+        width: auto;
+       height: 30px;
+    }
+    button {
+        font-size: 5vw;
+        margin-top: 20px ;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}

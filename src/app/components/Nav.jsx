@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import "./Navbar.css";
+import "./M600Navbar.css";
 function Nav() {
   return (
-    <div class="main-navbar">
+    <div className="main-navbar">
       <h1>CST</h1>
       <ul>
         <li><Link href="/">Home</Link></li>

@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+  .content-centerdisplay{
+    transform: translateY(-40%);
+  }
+  .text-wellcom {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .text-detail {
+    font-size: 20px;
+  }
+}
