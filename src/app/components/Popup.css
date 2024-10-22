@@ -1,0 +1,76 @@
+/* src/app/about/components/Popup.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000; /* ให้แน่ใจว่ามันอยู่ข้างบนองค์ประกอบอื่น ๆ */
+}
+.popup-content { /*main*/
+  width: 20vw;
+  height: 12vw;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  background: white;
+  /* padding: calc(10px + 1vw) calc(50px + 1vw); */
+  border-radius: 1vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: calc(0.1rem + 1vw);
+}
+.detail{
+  align-items: center;
+  display: grid;
+  justify-content: space-around;
+}
+.answerPopup{
+  width: auto;
+ height: 30px;
+}
+.btnAfterPopup{
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  transform: translateX(200px) translateY(-210px);
+  background-color: #ffffff00;
+  color: black;
+  font-weight: bold;
+  /* position: absolute; */
+}
+.btnAfterPopup:hover{
+    background-color: #ffffff00; /* เปลี่ยนสีเมื่อ hover */
+}
+.btn-submit{
+  width: 100px;
+  margin: 0.5vw auto;
+  border-radius: 1vw;
+}
+h2{
+  font-weight: bold;
+}
+button {
+  margin-top: 20px ;
+  padding: 5px 10px;
+  border: none;
+  background-color: #000000; /* เปลี่ยนสีตามต้องการ */
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+input{
+  
+  margin: 1vw auto;
+  width: 10vw;
+  border: #000000 solid;
+  border-radius: 10px;
+  text-align: center;
+}
+button:hover {
+  background-color: #000000; /* เปลี่ยนสีเมื่อ hover */
+}

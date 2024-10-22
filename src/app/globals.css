@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+main {
+    display: flex;
+}
+
+.btn {
+    background-color: rgb(111, 111, 111);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn2 {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.container-btn {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(110%);
+    text-align: center;
+    justify-items: center;
+}
+
+.text-7xl {
+    min-height: 80px;
+    /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่พิมพ์ */
+    transition: opacity 0.5s;
+    /* เพิ่มการเปลี่ยนแปลงความโปร่งใส */
+}
+
+.text-xl {
+    min-height: 50px;
+    /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่สอง */
+    transition: opacity 0.5s;
+    /* เพิ่มการเปลี่ยนแปลงความโปร่งใส */
+}
+
+.content-centerdisplay {
+    min-height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(80%);
+    text-align: center;
+}
+
+.AtomTonBomPhoto {
+    height: 300px;
+    width: auto;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-160%);
+    border-radius: 10px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.container-cstVideo {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-150%);
+    justify-content: center;
+}
+
+.member-Photo {
+    width: auto;
+    border-radius: 10px;
+    height: 200px;
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(20%);
+    filter: drop-shadow(0px 0px 5px black);
+}
+.container-sectiongrop{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    transform: translateY(20%);
+    justify-content: center;
+    
+}
+/* section-member */
+.section-member {
+    display: flex;
+    justify-content: center;
+    width: 1655px;
+    height: 170rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.grop-section-member {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+
+    justify-content: center;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.gallery {
+
+    justify-content: center;
+    padding: 2rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(4, 200px);
+    gap: 5rem 1rem;
+    height: 1200px;
+}
+
+.topic-text {
+    font-size: calc(1.5rem + 2vw);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+figure {
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+::-webkit-scrollbar {
+    /* ตกแต่ง scrollbar ทั้งตัว */
+    width: 12px;
+    /* ความกว้างของ scrollbar */
+}
+
+/* ตกแต่งตัว scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    /* สีของ scrollbar */
+    border-radius: 10px;
+    /* ความโค้งมน */
+    border: 0.2vw solid #000000;
+    /* ขอบสีขาวรอบ scrollbar */
+}
+
+/* ตกแต่ง scrollbar เมื่อ hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ตกแต่ง scrollbar track */
+::-webkit-scrollbar-track {
+    background: #00000000;
+    /* สีพื้นหลังของ scrollbar */
+    border-radius: 6px;
+}
