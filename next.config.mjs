@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images:{
-        domains: []
-    }
-};
+// const nextConfig = {
+//     images:{
+//         domains: []
+//     }
+// };
 
-export default nextConfig;
+
+{import('next').NextConfig} 
+const nextConfig = {
+    output: 'export',
+  }
+  
+  export default nextConfig;

@@ -4,14 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-on-netlify",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "mongodb": "^6.9.0",
     "next": "^14.2.15",
-    "next-on-netlify": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0"
