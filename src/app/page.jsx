@@ -259,9 +259,9 @@ export default function Home() {
                 />
                 <h4>12</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              {/* <figure className ="gallery__item gallery__item--6">
 
-              </figure>
+              </figure> */}
               <figure className ="gallery__item gallery__item--6">
                 <Image
                   className ="member-Photo"
