@@ -1,6 +1,9 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .content-centerdisplay {
     transform: translateY(-40%);
+  }
+  .container-cstvideo{
+    transform: translateY(-1000%);
   }
 
   .text-wellcom {
@@ -11,6 +14,7 @@
   .text-detail {
     font-size: 20px;
   }
+
   .gallery {
     justify-content: center;
     padding: 1rem 2.5rem;
@@ -19,7 +23,7 @@
     grid-template-rows: repeat(4, 200px);
     gap: 2rem 1rem;
     height: 1200px;
-}
+  }
   .member-Photo {
     object-fit: cover;
     height: 150px;

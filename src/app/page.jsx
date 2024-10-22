@@ -26,22 +26,22 @@ export default function Home() {
     let resizeTimeout;
 
     const handleResize = () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            // ทำงานที่ต้องการเมื่อขนาดหน้าจอเปลี่ยน
-            console.log('หน้าจอถูกปรับขนาด');
-            // อาจจะเรียกใช้ฟังก์ชันหรืออัปเดตสถานะที่นี่
-        }, 250); // รอ 250 มิลลิวินาทีก่อนทำงาน
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        // ทำงานที่ต้องการเมื่อขนาดหน้าจอเปลี่ยน
+        console.log('หน้าจอถูกปรับขนาด');
+        // อาจจะเรียกใช้ฟังก์ชันหรืออัปเดตสถานะที่นี่
+      }, 250); // รอ 250 มิลลิวินาทีก่อนทำงาน
     };
 
     window.addEventListener('resize', handleResize);
 
     // Cleanup function
     return () => {
-        window.removeEventListener('resize', handleResize);
-        clearTimeout(resizeTimeout);
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
     };
-}, []); 
+  }, []);
 
   useEffect(() => {
     // พิมพ์ข้อความแรก
@@ -116,17 +116,15 @@ export default function Home() {
       <div className="content-centerdisplay">
         <div className="text-wellcom">{displayText}</div>
         <div className="text-detail">{displayText2}</div>
-
-        {/* <div className="container-cstVideo">
-          <ReactPlayer
-            className="servicesPage-video"
-            url='https://www.youtube.com/watch?v=29iQ9YPlCOQ'
-            
-            controls />
-        </div> */}
-        <button onClick={openPopup}>Click Me</button>
+          <div className="container-cstvideo">
+            <ReactPlayer
+              className="cst-video"
+              url='https://www.youtube.com/watch?v=29iQ9YPlCOQ'
+              controls />
+          </div>
+        <button onClick={openPopup} className='btn-center'>Click Me</button>
       </div>
-      
+
       <div className="container-sectiongrop">
         <section className="section-member">
           <div className="grop-section-member">
@@ -138,10 +136,10 @@ export default function Home() {
               1 CST
             </div>
 
-            <div className ="gallery">
-              <figure className ="gallery__item gallery__item--1">
+            <div className="gallery">
+              <figure className="gallery__item gallery__item--1">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={LioPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -149,9 +147,9 @@ export default function Home() {
                 />
                 <h4>Lio</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--2">
+              <figure className="gallery__item gallery__item--2">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={frunkPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -159,9 +157,9 @@ export default function Home() {
                 />
                 <h4>Frunk</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--3">
+              <figure className="gallery__item gallery__item--3">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={BomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -169,9 +167,9 @@ export default function Home() {
                 />
                 <h4>Bom</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--4">
+              <figure className="gallery__item gallery__item--4">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={TonPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -179,9 +177,9 @@ export default function Home() {
                 />
                 <h4>Ton</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--5">
+              <figure className="gallery__item gallery__item--5">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -189,9 +187,9 @@ export default function Home() {
                 />
                 <h4>Atom</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -199,9 +197,9 @@ export default function Home() {
                 />
                 <h4>6</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -209,9 +207,9 @@ export default function Home() {
                 />
                 <h4>7</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -219,9 +217,9 @@ export default function Home() {
                 />
                 <h4>8</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -229,9 +227,9 @@ export default function Home() {
                 />
                 <h4>9</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -239,9 +237,9 @@ export default function Home() {
                 />
                 <h4>10</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -249,9 +247,9 @@ export default function Home() {
                 />
                 <h4>11</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -262,9 +260,9 @@ export default function Home() {
               {/* <figure className ="gallery__item gallery__item--6">
 
               </figure> */}
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -272,9 +270,9 @@ export default function Home() {
                 />
                 <h4>13</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -288,10 +286,10 @@ export default function Home() {
               2 CST
             </div>
 
-            <div className ="gallery">
-              <figure className ="gallery__item gallery__item--1">
+            <div className="gallery">
+              <figure className="gallery__item gallery__item--1">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={LioPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -299,9 +297,9 @@ export default function Home() {
                 />
                 <h4>Lio</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--2">
+              <figure className="gallery__item gallery__item--2">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={frunkPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -309,9 +307,9 @@ export default function Home() {
                 />
                 <h4>Frunk</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--3">
+              <figure className="gallery__item gallery__item--3">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={BomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -319,9 +317,9 @@ export default function Home() {
                 />
                 <h4>Bom</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--4">
+              <figure className="gallery__item gallery__item--4">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={TonPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -329,9 +327,9 @@ export default function Home() {
                 />
                 <h4>Ton</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--5">
+              <figure className="gallery__item gallery__item--5">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -339,9 +337,9 @@ export default function Home() {
                 />
                 <h4>Atom</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -349,9 +347,9 @@ export default function Home() {
                 />
                 <h4>6</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -359,9 +357,9 @@ export default function Home() {
                 />
                 <h4>7</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -369,9 +367,9 @@ export default function Home() {
                 />
                 <h4>8</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -379,9 +377,9 @@ export default function Home() {
                 />
                 <h4>9</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -389,9 +387,9 @@ export default function Home() {
                 />
                 <h4>10</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -399,9 +397,9 @@ export default function Home() {
                 />
                 <h4>11</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -409,12 +407,12 @@ export default function Home() {
                 />
                 <h4>12</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
 
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."
@@ -422,9 +420,9 @@ export default function Home() {
                 />
                 <h4>13</h4>
               </figure>
-              <figure className ="gallery__item gallery__item--6">
+              <figure className="gallery__item gallery__item--6">
                 <Image
-                  className ="member-Photo"
+                  className="member-Photo"
                   src={atomPhoto}
                   alt="Picture of the author"
                   blurDataURL="data:..."

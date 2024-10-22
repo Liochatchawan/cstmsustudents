@@ -33,35 +33,26 @@
   width: auto;
  height: 30px;
 }
-.btnAfterPopup{
-  width: 10px;
-  height: 10px;
-  margin: 0;
-  transform: translateX(200px) translateY(-210px);
-  background-color: #ffffff00;
-  color: black;
-  font-weight: bold;
-  /* position: absolute; */
-}
-.btnAfterPopup:hover{
-    background-color: #ffffff00; /* เปลี่ยนสีเมื่อ hover */
-}
+
 .btn-submit{
   width: 100px;
   margin: 0.5vw auto;
   border-radius: 1vw;
-}
-h2{
-  font-weight: bold;
-}
-button {
-  margin-top: 20px ;
-  padding: 5px 10px;
-  border: none;
-  background-color: #000000; /* เปลี่ยนสีตามต้องการ */
+  background-color: #000000; 
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  font-weight: bold;
+  border: 2px inset black;
+}
+.btn-submit:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px inset black;
+  transition: all 0.2s;
+}
+
+h2{
+  font-weight: bold;
 }
 input{
   margin: 1vw auto;
@@ -69,7 +60,4 @@ input{
   border: #000000 solid;
   border-radius: 10px;
   text-align: center;
-}
-button:hover {
-  background-color: #000000; /* เปลี่ยนสีเมื่อ hover */
 }
