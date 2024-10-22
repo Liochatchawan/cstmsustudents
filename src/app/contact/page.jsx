@@ -45,7 +45,10 @@ export default function ContactPage() {
 
   return (
     <div className="flex justify-center">
-      <form onSubmit={handleSubmit} className="justify-center text-2xl">
+      <div className="comingsoon">
+                Coming Soon
+            </div>
+      {/* <form onSubmit={handleSubmit} className="justify-center text-2xl">
         <h1>Survey Form</h1>
         <div>
           <label>Name:</label>
@@ -60,7 +63,7 @@ export default function ContactPage() {
           <textarea name="feedback" value={formData.feedback} onChange={handleChange} required></textarea>
         </div>
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
     </div>
   );
 }

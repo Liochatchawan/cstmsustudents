@@ -16,10 +16,9 @@ const geistMono = localFont({
 export const metadata = {
   title: "CST",
   description: "Create by CST Students",
+  
 };
-
 import Nav from "./components/Nav";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

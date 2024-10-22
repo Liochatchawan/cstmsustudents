@@ -1,9 +1,5 @@
 'use client';
-import WindowSize from './components/WindowSize';
-import dynamic from 'next/dynamic';
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
-import atomPhoto from './public/atom.png';
 import Popup from './components/Popup'; // แก้ไขการนำเข้าให้ถูกต้อง
 
 import ReactPlayer from 'react-player';//video
