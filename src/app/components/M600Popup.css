@@ -1,7 +1,7 @@
 :root{
     --max-content:300px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     .popup-content{
         width: 80%;
         max-width: 480px;
