@@ -7,7 +7,7 @@ function ServicesPage() {
     return (
         <div className="container mx-auto">
             <div className="comingsoon">
-                Coming Soon
+                Game Page <br />Coming Soon
             </div>
         </div>
     )

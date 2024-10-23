@@ -46,7 +46,7 @@ export default function ContactPage() {
   return (
     <div className="flex justify-center">
       <div className="comingsoon">
-                Coming Soon
+                Contact <br />Coming Soon
             </div>
       {/* <form onSubmit={handleSubmit} className="justify-center text-2xl">
         <h1>Survey Form</h1>

@@ -3,6 +3,7 @@
   border-radius: 1rem;
   box-shadow: 0 0 10px rgb(125, 125, 125), 0 0 5px 1px rgba(125, 125, 125);
   width: 95%;
+  max-width: 1800px;
   margin: auto;
   margin-top: 1rem;
   padding: 1rem 0;

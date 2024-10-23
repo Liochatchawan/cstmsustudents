@@ -8,17 +8,16 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   z-index: 1000; /* ให้แน่ใจว่ามันอยู่ข้างบนองค์ประกอบอื่น ๆ */
 }
 .popup-content { /*main*/
-  width: 20vw;
-  height: 12vw;
+  width: 40%;
+  height: 40%;
   justify-content: center;
-  align-items: center;
-  display: grid;
+  align-items: space-between;
+  display: flex;
   background: white;
-  /* padding: calc(10px + 1vw) calc(50px + 1vw); */
   border-radius: 1vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -51,8 +50,9 @@
   transition: all 0.2s;
 }
 
-h2{
+.ex{
   font-weight: bold;
+  font-size: 2vw;
 }
 input{
   margin: 1vw auto;

@@ -25,7 +25,8 @@ const Popup = ({ message, onClose }) => {
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
         <div className="detail">
-          <h2>1+1 = ได้เท่าไหร่น้องๆ</h2>
+          <div className="ex">1+1 = ได้เท่าไหร่น้องๆ</div>
+          
           <input
             type="text"
             value={inputValue}

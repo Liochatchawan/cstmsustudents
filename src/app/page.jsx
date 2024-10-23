@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';//video
 
 export default function Home() {
 
-  const text = "Welcome to the CST";
+  const text = "Welcome to CST Website";
   const text2 = "Create by CST Students"; // ข้อความที่จะพิมพ์
   const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
   const [displayText2, setDisplayText2] = useState(""); // ข้อความที่สอง

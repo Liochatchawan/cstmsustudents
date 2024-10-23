@@ -54,7 +54,7 @@ function AboutPage() {
     return (
         <div className="container mx-auto">
             <div className="comingsoon">
-                Coming Soon
+                Member <br />Coming Soon
             </div>
             {/* <h3>AboutPage</h3>
             <Image
