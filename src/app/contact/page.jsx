@@ -44,7 +44,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex justify-center">
+    <div>
       <div className="comingsoon">
                 Contact <br />Coming Soon
             </div>

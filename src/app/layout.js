@@ -16,15 +16,18 @@ const geistMono = localFont({
 export const metadata = {
   title: "CST",
   description: "Create by CST Students",
-  
+
 };
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable}antialiased`}>
+      <body>
         <Nav />
         {children}
+        <Footer /> {/* Footer จะอยู่ที่ด้านล่างของหน้าจอเสมอ */}
       </body>
     </html>
   );

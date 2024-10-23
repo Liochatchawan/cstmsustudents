@@ -52,7 +52,7 @@ function AboutPage() {
     };
 
     return (
-        <div className="container mx-auto">
+        <div>
             <div className="comingsoon">
                 Member <br />Coming Soon
             </div>

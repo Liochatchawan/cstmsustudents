@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';//video
 
 function ServicesPage() {
     return (
-        <div className="container mx-auto">
+        <div>
             <div className="comingsoon">
                 Game Page <br />Coming Soon
             </div>

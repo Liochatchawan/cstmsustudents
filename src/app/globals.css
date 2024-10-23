@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    
+
 }
 
 .comingsoon {
@@ -29,7 +29,7 @@ body {
 }
 
 .text-wellcom {
-    font-size:4vw;
+    font-size: 4vw;
     font-weight: bold;
     min-height: 6vw;
     /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่พิมพ์ */
@@ -38,7 +38,7 @@ body {
 }
 
 .text-detail {
-    font-size:2vw;
+    font-size: 2vw;
     min-height: 3vw;
     /* กำหนดความสูงขั้นต่ำสำหรับข้อความที่สอง */
     transition: opacity 0.5s;
@@ -68,12 +68,13 @@ body {
 .container-cstvideo {
     display: flex;
     width: 100%;
-    
+
     position: absolute;
     top: 80%;
     transform: translateY(-150%);
     justify-content: center;
 }
+
 .member-Photo {
     width: auto;
     border-radius: 10px;
@@ -129,7 +130,7 @@ body {
     font-size: calc(1.5rem + 2vw);
     padding-top: 1rem;
     text-align: center;
-    
+
 }
 
 .btn-center {
@@ -165,6 +166,17 @@ h2 {
 h4 {
     text-align: center;
     margin-top: 1rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    /* ขยายให้เต็มที่เหลือในหน้าจอ */
 }
 
 ::-webkit-scrollbar {
