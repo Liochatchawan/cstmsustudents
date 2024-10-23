@@ -1,11 +1,14 @@
 :root {
-  --font-width:2vw;
+  --min-width: max-width(50PX);
+  --font-width: 2vw;
 }
+
 @media screen and (max-width: 1200px) {
   .content-centerdisplay {
     transform: translateY(-40%);
   }
-  .container-cstvideo{
+
+  .container-cstvideo {
     transform: translateY(-1000%);
   }
 
@@ -25,19 +28,30 @@
 
   .gallery {
     justify-content: center;
-    padding: 1rem 2.5rem;
+    padding: 0 0;
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(4, 200px);
-    gap: 2rem 1rem;
+    grid-template-rows: repeat(4, 150px);
+    gap: 0.1rem 0.1rem;
     height: 1200px;
   }
+
   .member-Photo {
     object-fit: cover;
-    
-}
-  .btn-center{
-    font-size: var(--font-width);
+    width: 15vw;
+    height: auto;
+  }
+
+  figure {
+    height: 50px;
+  }
+
+  .grop-section-member {
+    width: 80%;
+  }
+
+  .btn-center {
+    font-size: var(--min-width);
     padding: calc((pi / 2));
   }
 }

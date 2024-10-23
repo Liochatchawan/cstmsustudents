@@ -1,22 +1,23 @@
 .footer {
-    font-size: 1ถpx;
+    display: flex;
     background-color: #000000;
     color: white;
-    text-align: center;
-    padding: 20px;
     width: 100%; /* ยังคงเต็มความกว้างของหน้าจอ */
     max-width: 100%; /* ไม่ให้ขยายเกินความกว้างหน้าจอ */
-    height: 60px; /* กำหนดความสูงคงที่ */
+    height: 50px; /* กำหนดความสูงคงที่ */
     position: fixed; /* คงตำแหน่งที่ด้านล่างของหน้าจอ */
     bottom: 0; /* ติดกับด้านล่างของหน้าจอ */
     left: 0; /* ชิดซ้าย */
     z-index: 1000; /* ทำให้ footer อยู่ด้านบนของเนื้อหา */
     box-sizing: border-box; /* เพื่อให้ padding อยู่ในขอบเขตของความกว้างและความสูง */
-  }
+    align-items: center;
+    justify-content: center;
 
-  .footer p {
-    margin: 0;
-    white-space: nowrap; /* ไม่ให้ตัดคำลงบรรทัดใหม่ */
-    overflow: hidden; /* ซ่อนข้อความที่ล้น */
-    text-overflow: ellipsis; /* เพิ่ม ... เมื่อข้อความยาวเกินไป */
-  }
+    p {
+        margin: 0;
+        white-space: nowrap; /* ไม่ให้ตัดคำลงบรรทัดใหม่ */
+        overflow: hidden; /* ซ่อนข้อความที่ล้น */
+        text-overflow: ellipsis; /* เพิ่ม ... เมื่อข้อความยาวเกินไป */
+    }
+}
+

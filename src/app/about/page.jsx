@@ -53,9 +53,9 @@ function AboutPage() {
 
     return (
         <div>
-            <div className="comingsoon">
+            {/* <div className="comingsoon">
                 Member <br />Coming Soon!
-            </div>
+            </div> */}
             {/* <h3>AboutPage</h3>
             <Image
                 src={phototest}
@@ -81,7 +81,7 @@ function AboutPage() {
                             Member CST
                         </div>
 
-                        <div className="text-center text-4xl pt-10">
+                        <div className="text-center text-2xl mt-2 mb-2">
                             1 CST
                         </div>
 

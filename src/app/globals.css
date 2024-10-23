@@ -89,8 +89,9 @@ body {
     display: flex;
     width: 100%;
     position: absolute;
-    top: 80%;
-    transform: translateY(10%);
+    top: 20%;
+    
+    /* transform: translateY(-10%); */
     justify-content: center;
 
 }
@@ -152,7 +153,6 @@ body {
 }
 
 figure {
-
     display: grid;
     align-items: center;
     justify-content: center;
