@@ -42,7 +42,6 @@ function AboutPage() {
     }, [index, isAdding, displayText]);  // ทำงานทุกครั้งที่ index, isAdding หรือ displayText เปลี่ยน
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-
     const openPopup = () => {
         setIsPopupOpen(true);
     };

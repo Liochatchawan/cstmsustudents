@@ -1,12 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Popup from './components/Popup'; // แก้ไขการนำเข้าให้ถูกต้อง
-
 import ReactPlayer from 'react-player';//video
 
-
 export default function Home() {
-
   const text = "Welcome to CST Website";
   const text2 = "Create by CST Students"; // ข้อความที่จะพิมพ์
   const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
@@ -16,7 +13,6 @@ export default function Home() {
 
   useEffect(() => {
     let resizeTimeout;
-
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
@@ -91,7 +87,6 @@ export default function Home() {
   }, [index, isAdding, displayText2]);  // ทำงานทุกครั้งที่ index, isAdding หรือ displayText2 เปลี่ยน
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
   const openPopup = () => {
     setIsPopupOpen(true);
   };
@@ -100,11 +95,9 @@ export default function Home() {
     setIsPopupOpen(false);
   };
 
-
   return (
     <main>
       {isPopupOpen && (<Popup onClose={closePopup} />)}
-
       <div className="content-centerdisplay">
         <div className="text-wellcom">{displayText}</div>
         <div className="text-detail">{displayText2}</div>
@@ -116,8 +109,6 @@ export default function Home() {
           </div>
         <button onClick={openPopup} className='btn-center'>Click Me</button>
       </div>
-
-
     </main>
   );
 }

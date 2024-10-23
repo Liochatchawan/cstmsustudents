@@ -10,7 +10,6 @@ const Popup = ({ message, onClose }) => {
   };
   const answer = '2', answer2 = '2'; // ค่าที่คุณต้องการเช็ค
 
-
   const handleSubmit = () => {
     if(inputValue === ''){
       setResult('ใส่คำตอบด้วยสิน้องรัก')
@@ -27,14 +26,12 @@ const Popup = ({ message, onClose }) => {
         <div className="detail">
           {/* <div className="ex">1+1 = ได้เท่าไหร่น้องๆ</div> */}
           <div className="ex">1+1 = ได้เท่าไหร่น้องๆ</div>
-          
           <input
             type="text"
             value={inputValue}
             onChange={handleInputChange}
             placeholder="ตอบมาเลยน้องๆ"
           />
-
           <div className = "answerPopup">{result}</div> {/* แสดงผลลัพธ์หลังจากกด Submit */}
           <button className="btn-submit" onClick={handleSubmit}>Submit</button>
         </div>
