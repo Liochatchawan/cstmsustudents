@@ -46,7 +46,7 @@ export default function ContactPage() {
   return (
     <div>
       <div className="comingsoon">
-                Contact <br />Coming Soon
+                Contact <br />Coming Soon!
             </div>
       {/* <form onSubmit={handleSubmit} className="justify-center text-2xl">
         <h1>Survey Form</h1>

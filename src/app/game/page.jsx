@@ -7,7 +7,7 @@ function ServicesPage() {
     return (
         <div>
             <div className="comingsoon">
-                Game Page <br />Coming Soon
+                Game Page <br />Coming Soon!
             </div>
         </div>
     )

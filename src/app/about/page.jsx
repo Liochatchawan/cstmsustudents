@@ -54,7 +54,7 @@ function AboutPage() {
     return (
         <div>
             <div className="comingsoon">
-                Member <br />Coming Soon
+                Member <br />Coming Soon!
             </div>
             {/* <h3>AboutPage</h3>
             <Image
