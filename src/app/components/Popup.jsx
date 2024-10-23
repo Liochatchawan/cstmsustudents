@@ -8,7 +8,7 @@ const Popup = ({ message, onClose }) => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-  const answer = '2', answer2 = '3'; // ค่าที่คุณต้องการเช็ค
+  const answer = '2', answer2 = '2'; // ค่าที่คุณต้องการเช็ค
 
 
   const handleSubmit = () => {
