@@ -39,9 +39,24 @@
         border-radius: 2vw;
         border: 2px solid black;
     }
-    .btn-submit:hover{
-        background-color: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        border: 2px solid black;
+
+    .btn-submit:hover, .btn-submit:focus {
+        color: black;
+        background-color: white;
     }
+    
+    /* เมื่อกดปุ่ม */
+    .btn-submit:active {
+        color: black;
+        background-color: white;
+    }
+    
+    /* เมื่อปล่อยการกดหรือสัมผัส */
+    .btn-submit:focus:not(:active) {
+        color: white;
+        background-color: black;
+    }
+
+
+
 }

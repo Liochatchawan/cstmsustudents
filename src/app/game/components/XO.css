@@ -34,7 +34,20 @@
     border-radius: 10px;
     border: black solid 1px;
 }
-.btn-xo:hover{
+/* เมื่อเอาเมาส์ไปวางที่ปุ่มหรือแตะที่ปุ่มบนมือถือ */
+.btn-xo:hover, .btn-xo:focus {
     color: black;
     background-color: white;
+}
+
+/* เมื่อกดปุ่ม */
+.btn-xo:active {
+    color: black;
+    background-color: white;
+}
+
+/* เมื่อปล่อยการกดหรือสัมผัส */
+.btn-xo:focus:not(:active) {
+    color: white;
+    background-color: black;
 }
