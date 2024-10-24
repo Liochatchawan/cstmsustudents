@@ -1,14 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
-import React from 'react'
-import ReactPlayer from 'react-player';//video
 import './components/XO.css';
 import './components/MXO.css';
+
 const initialBoard = ['', '', '', '', '', '', '', '', ''];
+
 function ServicesPage() {
     const [board, setBoard] = useState(initialBoard);
     const [playerTurn, setPlayerTurn] = useState(true); // true = user, false = bot
     const [winner, setWinner] = useState(null);
+    const [randomNumber, setRandomNumber] = useState(null); // เก็บตัวเลขสุ่ม
 
     // ตรวจสอบการชนะ
     const checkWinner = (board) => {
@@ -51,6 +52,7 @@ function ServicesPage() {
         const result = checkWinner(board);
         if (result) {
             setWinner(result);
+            setRandomNumber(Math.floor(Math.random() * 2) + 1); // สุ่มตัวเลขเมื่อมีผู้ชนะ
         } else if (!playerTurn && !winner) {
             // บอทเล่นเมื่อถึงตาของบอท
             setTimeout(() => botMove([...board]), 500);
@@ -60,14 +62,15 @@ function ServicesPage() {
     // แสดงข้อความเมื่อมีผู้ชนะ
     const renderResult = () => {
         if (winner === 'X') {
-            return <div>เก่งอยู่ตั้วนิ!</div>;
+            return randomNumber === 1 ? <div>เก่งอยู่ตั้วนิ!</div> : <div>ได้การ!</div>;
         } else if (winner === 'O') {
-            return <div>กากแท้!</div>;
+            return randomNumber === 1 ? <div>กากแท้!</div> : <div>ส่ำนี้กะแพ้น้อ!</div>;
         } else if (winner === 'draw') {
             return <div>เสมอกัน!</div>;
         }
         return null;
     };
+
     return (
         <div>
             <div className="game-xo">
@@ -90,16 +93,18 @@ function ServicesPage() {
                     className='btn-xo'
                     onClick={() => {
                         setBoard(initialBoard);
-                        setWinner(null); setPlayerTurn(true);
+                        setWinner(null); 
+                        setPlayerTurn(true);
+                        setRandomNumber(null); // รีเซ็ตตัวเลขสุ่ม
                     }}>
                     Restart
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
-export default ServicesPage
+export default ServicesPage;
 
 const styles = {
     board: {

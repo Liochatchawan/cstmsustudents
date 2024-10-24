@@ -209,7 +209,7 @@ function AboutPage() {
                             </figure>
                         </div>
                         <hr />
-                        <div className="text-center text-4xl pt-10">
+                        <div className="text-center text-2xl mt-2 mb-2">
                             2 CST
                         </div>
 
