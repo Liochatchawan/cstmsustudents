@@ -43,7 +43,7 @@ const Popup = ({ message, onClose }) => {
       } else if (randomNum === 2) {
         setResult('😢ฉลาดปานนี้คือยังถืกเขาตั้ว😢');
       } else {
-        setResult('😢ตอบถูกไม่ได้แปลว่าเขาจะตอบแชทเรา😢');
+        setResult(['😢ตอบถูกไม่ได้แปลว่า😢','😢เขาจะตอบแชทเรานะ😢']);
       }
     } else {
       if (randomNum === 1) {

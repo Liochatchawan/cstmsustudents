@@ -39,7 +39,7 @@
   .member-Photo {
     object-fit: cover;
     width: 15vw;
-    height: auto;
+    height: 25vw;
   }
 
   figure {

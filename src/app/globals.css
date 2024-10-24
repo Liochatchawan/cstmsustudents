@@ -68,7 +68,6 @@ body {
 .container-cstvideo {
     display: flex;
     width: 100%;
-
     position: absolute;
     top: 80%;
     transform: translateY(-150%);
@@ -90,10 +89,8 @@ body {
     width: 100%;
     position: absolute;
     top: 20%;
-    
     /* transform: translateY(-10%); */
     justify-content: center;
-
 }
 
 /* section-member */

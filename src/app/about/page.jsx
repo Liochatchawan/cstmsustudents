@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import phototest from '../public/10.png';
 import Popup from './components/Popup'; // แก้ไขการนำเข้าให้ถูกต้อง
 import frunkPhoto from '../public/frunk.jpg';
 import BomPhoto from '../public/Bom.jpg';
 import TonPhoto from '../public/Ton3.png';
 import LioPhoto from '../public/Lio2.jpg';
 import atomPhoto from '../public/atom.png';
+import piePhoto from '../public/Pie.jpg';
 function AboutPage() {
     const text = "Welcome to the About Page! This is a typing effect demo."; // ข้อความที่จะพิมพ์
     const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
@@ -52,27 +52,6 @@ function AboutPage() {
 
     return (
         <div>
-            {/* <div className="comingsoon">
-                Member <br />Coming Soon!
-            </div> */}
-            {/* <h3>AboutPage</h3>
-            <Image
-                src={phototest}
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                blurDataURL="data:..."
-                placeholder="blur" // Optional blur-up while loading
-            /> */}
-            {/* แสดงข้อความที่กำลังพิมพ์หรือลบ */}
-            {/* <div className="typing-text" style={{ fontSize: '24px', fontFamily: 'monospace' }}>
-                {displayText}
-            </div> */}
-
-            {/* <button onClick={openPopup}>Open Popup</button>
-            {isPopupOpen && (
-                <Popup message="This is a popup!" onClose={closePopup} />
-            )} */}
             <div className="container-sectiongrop">
                 <section className="section-member">
                     <div className="grop-section-member">
@@ -138,12 +117,12 @@ function AboutPage() {
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={piePhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>6</h4>
+                                <h4>Pie</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
