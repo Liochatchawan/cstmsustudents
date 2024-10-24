@@ -1,0 +1,40 @@
+
+.title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 5vw;
+    margin-bottom: 5vw;
+}
+.game-xo{
+    margin-top: 5vw;
+    display: grid;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+}
+.board{
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+.result{
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 15vw;
+    max-height: 50px;
+}
+.btn-xo{
+    margin: 0 auto;
+    font-weight: bold; 
+    padding: 10px;
+    color: white;
+    background-color: black;
+    width: 50%;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+.btn-xo:hover{
+    color: black;
+    background-color: white;
+}
