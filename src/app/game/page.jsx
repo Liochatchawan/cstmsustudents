@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import './components/XO.css';
 import './components/MXO.css';
-
+import './components/GuessWord.css'
 const initialBoard = ['', '', '', '', '', '', '', '', ''];
 
 function ServicesPage() {
@@ -71,6 +71,35 @@ function ServicesPage() {
         return null;
     };
 
+    // กำหนดคำตอบที่ถูกต้อง เช่น '1234'
+    const correctAnswer = '1233';
+    const [userGuess, setUserGuess] = useState('');
+    const [result, setResult] = useState('');
+
+    // ฟังก์ชันสำหรับเช็คคำตอบ
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // ตรวจสอบว่าคำที่ทายตรงกับคำตอบหรือไม่
+        if (userGuess.toString() === correctAnswer) {
+            setResult('เก่งๆ');
+        } else {
+            setResult('กระจอก');
+        }
+    };
+
+    // ใช้ useEffect เพื่อให้ result หายไปหลังจาก 5 วินาที
+    useEffect(() => {
+        if (result) {
+            const timer = setTimeout(() => {
+                setResult(''); // รีเซ็ตผลลัพธ์หลังจาก 5 วินาที
+            }, 5000);
+
+            // เคลียร์ timer เมื่อ component ถูก unmounted หรือ result เปลี่ยนค่า
+            return () => clearTimeout(timer);
+        }
+    }, [result]);
+
     return (
         <div>
             <div className="game-xo">
@@ -78,7 +107,7 @@ function ServicesPage() {
                 <div style={styles.board} className='board'>
                     {board.map((cell, idx) => (
                         <div
-                            className=''
+                            className='box-xo'
                             key={idx}
                             style={styles.cell}
                             onClick={() => handleClick(idx)}>
@@ -87,19 +116,60 @@ function ServicesPage() {
                     ))}
                 </div>
                 <div className="result">
-                   {renderResult()}
+                    {renderResult()}
                 </div>
                 <button
                     className='btn-xo'
                     onClick={() => {
                         setBoard(initialBoard);
-                        setWinner(null); 
+                        setWinner(null);
                         setPlayerTurn(true);
                         setRandomNumber(null); // รีเซ็ตตัวเลขสุ่ม
                     }}>
                     Restart
                 </button>
             </div>
+
+            <div className="game-guessWord">
+
+                <div
+                    className='container-guess'
+                    style={{ textAlign: 'center', marginTop: '50px' }}>
+                    <div className='text-center font-bold text-xl mb-5'>
+                        Guess The Word
+                    </div>
+                    <div className="hind-guess">
+                        อะไรมาก่อน 1 2 3 4
+                    </div>
+                    {/* แสดงผลลัพธ์ตรงนี้ */}
+                    
+
+                    {/* ฟอร์มทายคำ */}
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            className='input-guess'
+                            type="text"
+                            value={userGuess}
+                            onChange={(e) => setUserGuess(e.target.value)}
+                            placeholder="ใส่คำทายของคุณ"
+                        />
+                        <div className="result-guess">
+                        <p>{result}</p>
+                    </div>
+                        <br />
+                        <button
+                            type="submit"
+                            className='btn-guess'
+                        >Submit</button>
+                    </form>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
         </div>
     );
 }
