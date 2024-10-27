@@ -1,0 +1,104 @@
+.centered-container {
+    justify-content: center;
+    align-items: space-between;
+    display: grid;
+
+    /* flex */
+    flex-direction: column;
+    /* flex-col */
+    padding: 1rem;
+    /* p-4 */
+    border: #000000 solid 2px;
+    width: 90%;
+    /* w-full */
+    max-width: 60rem;
+    /* max-w-md */
+    /* height: 60vh; */
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* shadow-md */
+    
+}
+
+.box-contact {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* bg-white */
+    padding: 1.5rem;
+    /* p-6 */
+    border-radius: 0.375rem;
+    /* rounded */
+    
+}
+
+.box-contact>*+* {
+    margin-top: 1rem;
+    /* space-y-4 (space between children elements) */
+}
+.text-topic{
+    font-weight: bold;
+    min-height: 40px;
+    height: 6vw;
+    font-size: 2vw;
+    text-align: center;
+}
+.input-name{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20vw;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    height: 3rem;
+    min-width: 200px;
+    
+}
+.input-message{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 20vw;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+.text-inbox{
+    text-align: center;
+}
+.btn-contact {
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    width: 10vw;
+    max-width: 10rem;
+    min-width: 5rem;
+    border-radius: 2vw;
+    border: 2px solid black;
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+    color: black;
+    background-color: white;
+}
+
+/* เมื่อกดปุ่ม */
+.btn-contact:active {
+    color: black;
+    background-color: white;
+}
+
+/* เมื่อปล่อยการกดหรือสัมผัส */
+.btn-contact:focus:not(:active) {
+    color: white;
+    background-color: black;
+}
