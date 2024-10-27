@@ -1,8 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
-    functions = "netlify/functions"
-  
+  functions = "netlify/functions"  # กำหนด path ของ Serverless Functions
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
