@@ -7,24 +7,27 @@ export default function ContactPage() {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // ป้องกันการรีเฟรชหน้าเพจ
-
+    e.preventDefault();
+  
     try {
       const response = await fetch('/.netlify/functions/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, content: message }), // ส่งข้อมูลไปยัง API
+        body: JSON.stringify({ name, content: message }),
       });
-      const result = await response.json();
-      if (response.ok) {
-        alert('Message saved successfully');
-        setName('');
-        setMessage('');
-      } else {
-        alert('Failed to save message: ' + result.message);
+  
+      // ตรวจสอบ response ก่อนแปลงเป็น JSON
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage || 'Failed to fetch');
       }
+  
+      const result = await response.json();
+      alert('Message saved successfully');
+      setName('');
+      setMessage('');
     } catch (error) {
       console.error('Error:', error);
       alert('Error: ' + error.message);
