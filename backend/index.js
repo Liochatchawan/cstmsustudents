@@ -9,8 +9,8 @@ app.use(express.json());
 
 // ตั้งค่า CORS ให้อนุญาต origin ที่ต้องการ
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://cstmsustudents.vercel.app'], // เพิ่ม origin ที่ต้องการอนุญาต
-}));
+    origin: ['https://cstmsustudents.netlify.app', 'http://localhost:3000'],
+  }));
 
 // เชื่อมต่อกับ MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
