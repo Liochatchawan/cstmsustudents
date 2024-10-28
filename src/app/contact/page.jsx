@@ -6,7 +6,19 @@ import "./components/contact.css";
 import "./components/Mcontact.css";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-const fetcher = (url) => fetch(`${API_URL}${url}`).then((res) => res.json());
+const fetcher = async (url) => {
+  try {
+    console.log("Fetching data from:", `${API_URL}${url}`);
+    const res = await fetch(`${API_URL}${url}`);
+    if (!res.ok) throw new Error(`Failed to fetch data: ${res.statusText}`);
+    const data = await res.json();
+    console.log("Data fetched successfully:", data);
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+};
 
 export default function ContactPage() {
   const { data, error, mutate } = useSWR('/data', fetcher);
@@ -17,21 +29,29 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${API_URL}/data`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, message }),
-    });
+    try {
+      console.log("Submitting message to:", `${API_URL}/data`);
+      const response = await fetch(`${API_URL}/data`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, message }),
+      });
 
-    if (response.ok) {
-      setStatus('Message saved successfully!');
-      setUsername('');
-      setMessage('');
-      mutate(); // รีเฟรชข้อมูลหลังจากบันทึกข้อความใหม่
-    } else {
+      if (response.ok) {
+        setStatus('Message saved successfully!');
+        setUsername('');
+        setMessage('');
+        console.log("Message saved successfully.");
+        mutate(); // รีเฟรชข้อมูลหลังจากบันทึกข้อความใหม่
+      } else {
+        setStatus('Failed to save message');
+        console.error("Failed to save message:", response.statusText);
+      }
+    } catch (error) {
       setStatus('Failed to save message');
+      console.error("Submit error:", error);
     }
   };
 
