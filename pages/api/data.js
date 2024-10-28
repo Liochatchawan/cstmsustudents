@@ -1,5 +1,5 @@
-import connectToDatabase from '../../lib/mongodb';
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+const { MongoClient } = require('mongodb');
 
 // สร้าง schema สำหรับ Message
 const MessageSchema = new mongoose.Schema({
