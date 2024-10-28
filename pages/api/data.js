@@ -5,7 +5,6 @@ const connectToDatabase = async () => {
   if (mongoose.connection.readyState >= 1) return; // ตรวจสอบสถานะการเชื่อมต่อ เพื่อหลีกเลี่ยงการเชื่อมต่อใหม่ทุกครั้ง
   return mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
   });
 };
 
