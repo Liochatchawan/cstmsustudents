@@ -2,4 +2,13 @@
     .title{
         font-size: 10vw;
     }
+    .result{
+        font-size: 5vw;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        height: 15vw;
+        max-height: 60px;
+    }
 }
