@@ -102,3 +102,11 @@
     color: white;
     background-color: black;
 }
+.container-success-message{
+    margin: 0 auto;
+    min-height: 30px;
+}
+.success-message {
+    margin-top: 1rem; /* เทียบเท่า mt-4 */
+    color: #22c55e; /* เทียบเท่า text-green-500 */
+}

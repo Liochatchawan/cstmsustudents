@@ -41,7 +41,7 @@ export default function ContactPage() {
       setTimeout(() => revalidate({ retryCount }), 5000); // ลองใหม่หลังจาก 5 วินาที
     }
   });
-  
+
   const [username, setUsername] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
@@ -59,7 +59,7 @@ export default function ContactPage() {
   // ฟังก์ชัน handleSubmit สำหรับส่งข้อความ
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       console.log("Submitting message to:", API_URL);
       const response = await fetch(API_URL, {
@@ -69,7 +69,7 @@ export default function ContactPage() {
         },
         body: JSON.stringify({ username, message }),
       });
-  
+
       if (response.ok) {
         setStatus('Message saved successfully!');
         setUsername('');
@@ -117,7 +117,9 @@ export default function ContactPage() {
           Submit
         </button>
       </form>
-      {status && <p className="mt-4 text-green-500">{status}</p>}
+      <div className="container-success-message">
+        {status && <p className="success-message">{status}</p>}
+      </div>
     </div>
   );
 }
