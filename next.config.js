@@ -1,24 +1,18 @@
-/** @type {import('next').NextConfig} */
-// next.config.js
-module.exports = {
-  // output: 'export',
-  swcMinify: true,
-  images: {
-    unoptimized: true,
-    
-  },
-};
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
 module.exports = withBundleAnalyzer({
-  // อื่น ๆ ของการตั้งค่า
+  swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/proxy/:path*',
+        destination: 'https://cstmsustudents.vercel.app/api/:path*', // URL ต้นทางของ API ที่จะเรียกผ่าน proxy
+      },
+    ];
+  },
 });
-// next.config.mjs
-// export default {
-//     output: 'export',
-//     images: {
-//       unoptimized: true,
-//     },
-//   };

@@ -7,10 +7,12 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
-// ตั้งค่า CORS ให้อนุญาต origin ที่ต้องการ
+// ตั้งค่า CORS ให้อนุญาต origin, methods และ headers ที่จำเป็น
 app.use(cors({
-    origin: ['https://cstmsustudents.netlify.app', 'http://localhost:3000'],
-  }));
+  origin: ['https://cstmsustudents.netlify.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 // เชื่อมต่อกับ MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -22,8 +24,9 @@ app.get('/', (req, res) => {
   res.send('Welcome to the API');
 });
 app.get('/api', (req, res) => {
-    res.send('Welcome to the API root');
-  });
+  res.send('Welcome to the API root');
+});
+
 // Route สำหรับดึงข้อมูล message
 app.get('/api/data', async (req, res) => {
   console.log("Fetching messages...");
