@@ -4,8 +4,8 @@ import Popup from './components/Popup'; // แก้ไขการนำเข�
 import ReactPlayer from 'react-player';//video
 
 export default function Home() {
-  const text = "โชคครับ";
-  const text2 = "ชื่อโชค"; // ข้อความที่จะพิมพ์
+  const text = "Welcome to CST Website";
+  const text2 = "Create by CST Students"; // ข้อความที่จะพิมพ์
   const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
   const [displayText2, setDisplayText2] = useState(""); // ข้อความที่สอง
   const [index, setIndex] = useState(0);  // ตำแหน่งของตัวอักษร
