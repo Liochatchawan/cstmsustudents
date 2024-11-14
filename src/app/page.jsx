@@ -4,8 +4,8 @@ import Popup from './components/Popup'; // แก้ไขการนำเข�
 import ReactPlayer from 'react-player';//video
 
 export default function Home() {
-  const text = "Welcome to CST Website";
-  const text2 = "Create by CST Students"; // ข้อความที่จะพิมพ์
+  const text = "โชคครับ";
+  const text2 = "ชื่อโชค"; // ข้อความที่จะพิมพ์
   const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
   const [displayText2, setDisplayText2] = useState(""); // ข้อความที่สอง
   const [index, setIndex] = useState(0);  // ตำแหน่งของตัวอักษร
@@ -97,7 +97,7 @@ export default function Home() {
 
   return (
     <main>
-      {isPopupOpen && (<Popup onClose={closePopup} />)}
+      {isPopupOpen && (<Popup onClose={closePopup} />)} {/* //Popup.jsx */}
       <div className="content-centerdisplay">
         <div className="text-wellcom">{displayText}</div>
         <div className="text-detail">{displayText2}</div>
@@ -107,7 +107,7 @@ export default function Home() {
               url='https://www.youtube.com/watch?v=29iQ9YPlCOQ'
               controls />
           </div>
-        <button onClick={openPopup} className='btn-center'>Click Me</button>
+        <button onClick={openPopup} className='btn-center'>Details</button>
       </div>
     </main>
   );

@@ -72,7 +72,7 @@ function ServicesPage() {
     };
 
     // กำหนดคำตอบที่ถูกต้อง เช่น '1234'
-    const correctAnswer = '';
+    const correctAnswer = '1233';
     const [userGuess, setUserGuess] = useState('');
     const [result, setResult] = useState('');
 
@@ -80,8 +80,9 @@ function ServicesPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // ตรวจสอบว่าคำที่ทายตรงกับคำตอบหรือไม่
-        if (userGuess.toString() === correctAnswer) {
+        if(isNaN(userGuess)|| userGuess === ''){
+            setResult('ใส่คำตอบด้วยสิ เขาไม่ใส่ใจนะ')
+        }else if (userGuess.toString() === correctAnswer) {
             setResult('เก่งๆ');
         } else {
             setResult('กระจอก');
@@ -134,7 +135,7 @@ function ServicesPage() {
 
                 <div
                     className='container-guess'
-                    style={{ textAlign: 'center', marginTop: '50px' }}>
+                    style={{ textAlign: 'center'}}>
                     <div className='text-center font-bold text-xl mb-5'>
                         Guess The Word
                     </div>
@@ -145,7 +146,8 @@ function ServicesPage() {
                     
 
                     {/* ฟอร์มทายคำ */}
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit}
+                            className='from-guess'>
                         <input
                             className='input-guess'
                             type="text"

@@ -1,12 +1,15 @@
 .game-guessWord{
     display: grid;
+    height: 200px;
 }
 .container-guess{
     display: grid;
+    margin-top: 0;
+    
+    margin: 0 auto;
 }
 .hind-guess{
     font-weight: bold;
-    margin-bottom: 10vw;
 }
 .input-guess{
     border: 2px solid black;
