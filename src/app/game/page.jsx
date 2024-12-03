@@ -71,7 +71,6 @@ function ServicesPage() {
         return null;
     };
 
-    // กำหนดคำตอบที่ถูกต้อง เช่น '1234'
     const correctAnswer = '1233';
     const [userGuess, setUserGuess] = useState('');
     const [result, setResult] = useState('');

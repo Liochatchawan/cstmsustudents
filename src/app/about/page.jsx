@@ -2,54 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Popup from './components/Popup'; // แก้ไขการนำเข้าให้ถูกต้อง
 import frunkPhoto from '../public/frunk.jpg';
 import BomPhoto from '../public/Bom.jpg';
 import TonPhoto from '../public/Ton3.png';
 import LioPhoto from '../public/Lio2.jpg';
 import atomPhoto from '../public/atom.png';
 import piePhoto from '../public/Pie.jpg';
+import pitchaPhoto from '../public/Pitcha.jpg'
+import blackPhoto from '../public/black.jpg'
+import oumPhoto from '../public/Oum.jpg'
+import topPhoto from '../public/Top.jpg'
 function AboutPage() {
-    const text = "Welcome to the About Page! This is a typing effect demo."; // ข้อความที่จะพิมพ์
-    const [displayText, setDisplayText] = useState("");  // ข้อความที่จะแสดง
-    const [index, setIndex] = useState(0);  // ตำแหน่งของตัวอักษร
-    const [isAdding, setIsAdding] = useState(true);  // สถานะการพิมพ์หรือลบตัวอักษร
-
-    useEffect(() => {
-        if (isAdding) {
-            if (index < text.length) {
-                const timeout = setTimeout(() => {
-                    setDisplayText(displayText + text.charAt(index));  // แสดงตัวอักษรทีละตัว
-                    setIndex(index + 1);
-                }, 100);  // พิมพ์ตัวอักษรใหม่ทุก 100ms
-                return () => clearTimeout(timeout);  // ล้าง timeout
-            } else {
-                // เมื่อพิมพ์ครบแล้ว รอ 1 วินาที แล้วเริ่มลบ
-                setTimeout(() => setIsAdding(false), 1000);
-            }
-        } else {
-            if (index > 0) {
-                const timeout = setTimeout(() => {
-                    setDisplayText(displayText.slice(0, index - 1));  // ลบตัวอักษรทีละตัว
-                    setIndex(index - 1);
-                }, 100);  // ลบตัวอักษรทุก 100ms
-                return () => clearTimeout(timeout);
-            } else {
-                // เมื่อลบครบแล้ว รอ 1 วินาที แล้วเริ่มพิมพ์ใหม่
-                setTimeout(() => setIsAdding(true), 1000);
-            }
-        }
-    }, [index, isAdding, displayText]);  // ทำงานทุกครั้งที่ index, isAdding หรือ displayText เปลี่ยน
-
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const openPopup = () => {
-        setIsPopupOpen(true);
-    };
-
-    const closePopup = () => {
-        setIsPopupOpen(false);
-    };
-
     return (
         <div>
             <div className="container-sectiongrop">
@@ -58,7 +21,6 @@ function AboutPage() {
                         <div className="topic-text">
                             Member CST
                         </div>
-
                         <div className="text-center text-2xl mt-2 mb-2">
                             1 CST
                         </div>
@@ -77,12 +39,12 @@ function AboutPage() {
                             <figure className="gallery__item gallery__item--2">
                                 <Image
                                     className="member-Photo"
-                                    src={frunkPhoto}
+                                    src={oumPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Frunk</h4>
+                                <h4>Oum</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--3">
                                 <Image
@@ -127,88 +89,59 @@ function AboutPage() {
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={pitchaPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>7</h4>
+                                <h4>Pitcha</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={topPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>8</h4>
+                                <h4>Top</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>9</h4>
+                                <h4>Pao</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>10</h4>
+                                <h4>Kon</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>11</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>12</h4>
-                            </figure>
-                            {/* <figure className ="gallery__item gallery__item--6">
-
-              </figure> */}
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>13</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>14</h4>
+                                <h4>Pete</h4>
                             </figure>
                         </div>
+
+
                         <hr />
+
+                        
                         <div className="text-center text-2xl mt-2 mb-2">
                             2 CST
                         </div>
@@ -217,146 +150,64 @@ function AboutPage() {
                             <figure className="gallery__item gallery__item--1">
                                 <Image
                                     className="member-Photo"
-                                    src={LioPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Lio</h4>
+                                <h4>1</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--2">
                                 <Image
                                     className="member-Photo"
-                                    src={frunkPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Frunk</h4>
+                                <h4>2</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--3">
                                 <Image
                                     className="member-Photo"
-                                    src={BomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Bom</h4>
+                                <h4>3</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--4">
                                 <Image
                                     className="member-Photo"
-                                    src={TonPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Ton</h4>
+                                <h4>4</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--5">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
-                                <h4>Atom</h4>
+                                <h4>5</h4>
                             </figure>
                             <figure className="gallery__item gallery__item--6">
                                 <Image
                                     className="member-Photo"
-                                    src={atomPhoto}
+                                    src={blackPhoto}
                                     alt="Picture of the author"
                                     blurDataURL="data:..."
                                     placeholder="blur" // Optional blur-up while loading
                                 />
                                 <h4>6</h4>
                             </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>7</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>8</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>9</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>10</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>11</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>12</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>13</h4>
-                            </figure>
-                            <figure className="gallery__item gallery__item--6">
-                                <Image
-                                    className="member-Photo"
-                                    src={atomPhoto}
-                                    alt="Picture of the author"
-                                    blurDataURL="data:..."
-                                    placeholder="blur" // Optional blur-up while loading
-                                />
-                                <h4>14</h4>
-                            </figure>
+                            
                         </div>
                     </div>
                 </section>

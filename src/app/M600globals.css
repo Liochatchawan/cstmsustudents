@@ -33,7 +33,7 @@
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(4, 150px);
     gap: 0.1rem 0.1rem;
-    height: 800px;
+    
   }
 
   .member-Photo {
@@ -45,7 +45,6 @@
   figure {
     height: 50px;
   }
-
   .grop-section-member {
     width: 80%;
   }

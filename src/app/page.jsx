@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Popup from './components/Popup'; // แก้ไขการนำเข้าให้ถูกต้อง
-import ReactPlayer from 'react-player';//video
+import Popup from './components/Popup';
+import ReactPlayer from 'react-player';
 
 export default function Home() {
   const text = "Welcome to CST Website";
